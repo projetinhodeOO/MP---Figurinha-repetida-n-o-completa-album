@@ -29,13 +29,9 @@ public class Janela {
 		
 		//Botao para criar album novo
 		JButton botao1 = new JButton();
-		botao1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("Voce selecionou criar album");
-			}
-		});
 		botao1.setBounds(80, 250, 180, 30);
 		janela.add(botao1);
+		
 		//Texto do botao
 		JLabel criar = new JLabel("Criar novo album");
 		botao1.add(criar);
@@ -56,7 +52,7 @@ public class Janela {
 		gerenciar.setFont(new Font("Arial", Font.LAYOUT_LEFT_TO_RIGHT, 18));
 		
 		//Espaco para imagem1
-		JPanel im1= new JPanel();
+		JPanel im1 = new JPanel();
 		im1.setBounds(70, 300, 200, 200);
 		im1.setBackground(Color.WHITE);
 		janela.add(im1);
@@ -66,6 +62,25 @@ public class Janela {
 		im2.setBounds(1010, 300, 200, 200);
 		im2.setBackground(Color.WHITE);
 		janela.add(im2);
+		
+		//Acao tomada quando selecionado a opcao de criar album
+		botao1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//System.out.println("Voce selecionou criar album");
+				JFrame janela2 = new JFrame("Criar album");
+				janela2.setLayout(null);
+				janela2.setSize(800, 500);
+				janela2.getContentPane().setBackground(Color.GRAY);
+				janela2.setVisible(true);
+				janela2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				
+				//Lista dos tipos de album
+				String[] albuns = {"Copa do Mundo Qatar", "Yu-Gi-Oh!", "Pokemon"};
+				JList l1 = new JList(albuns);
+				l1.setBounds(30, 50, 200, 200);
+				janela2.add(l1);
+			}
+		});
 				
 	}
 }
