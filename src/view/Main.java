@@ -3,10 +3,13 @@ package view;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Set;
+
 import javax.swing.*;
 
 public class Main {
 	public static void main (String args[]) {
+		
 		//Criando a janela
 		JanelaInicial janela1 = new JanelaInicial();
 		
@@ -22,7 +25,6 @@ public class Main {
 		
 		//Botao para gerenciar album
 		JButton botao2 = new JButton();
-		
 		botao2.setBounds(1020, 250, 180, 30);
 		janela1.add(botao2);
 		
@@ -30,6 +32,8 @@ public class Main {
 		JLabel gerenciar = new JLabel("Gerenciar album");
 		botao2.add(gerenciar);
 		gerenciar.setFont(new Font("Arial", Font.LAYOUT_LEFT_TO_RIGHT, 18));
+		
+	
 		
 		//Acao tomada quando selecionado a opcao de criar album
 		botao1.addActionListener(new ActionListener() {
@@ -39,8 +43,8 @@ public class Main {
 				
 				//Botao para finalizar a criacao
 				JButton btnCriar = new JButton("Criar");
-				btnCriar.setBounds(350, 400, 100, 30);
 				janela2.add(btnCriar);
+				btnCriar.setBounds(350, 400, 100, 30);
 				
 				btnCriar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -49,8 +53,13 @@ public class Main {
 						} else {
 							JOptionPane.showMessageDialog(null, "Album criado com sucesso");
 						}
+						
 					}
+				
 				});
+				
+				
+				
 			}
 		});
 		//Acao tomada quando selecionado a opcao de gerenciar album
@@ -60,13 +69,97 @@ public class Main {
                 
 				//Botao para excluir album novo
                 JButton delete= new JButton();
-                delete.setBounds(600, 400, 150, 30);
                 janela3.add(delete);
+                delete.setBounds(600, 400, 150, 30);
 
                 //Texto do botao
                 JLabel text = new JLabel("Excluir album ");
                 delete.add(text);
                 criar.setFont(new Font("Arial", Font.LAYOUT_LEFT_TO_RIGHT, 18));
+                
+				delete.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						//janela de pergunta
+						JaneladePergunta janela6 = new JaneladePergunta();
+						// Botao do sim
+						JButton sim = new JButton("Sim");
+						sim.setBounds(25, 70, 90, 30);
+						janela6.add(sim);
+						
+						//Botao do não
+						JButton nao = new JButton("Não");
+						nao.setBounds(170, 70, 90, 30);
+						janela6.add(nao);
+				sim.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if(e.getSource() == sim) {
+						JOptionPane.showMessageDialog(null, "Excluido com sucesso");}
+				nao.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						 if(e.getSource() == nao) {
+								JOptionPane.showMessageDialog(null, "Tenha mais cuidado");
+
+						 }
+					}
+				});		
+					
+					
+					}});
+					
+}});
+				
+				
+                
+                
+                
+                
+                
+                
+                //Botao para edicao
+				JButton btnEdit = new JButton("Editar");
+				janela3.add(btnEdit);
+				btnEdit.setBounds(300, 400, 100, 30);
+				
+				//Acao do botão editar
+				btnEdit.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) 
+					{if("Pokemon".equals(janela3.albuns.getSelectedItem())) {
+						Janelapokemon janela4 = new Janelapokemon();
+						//botão de criar figurinha
+						JButton figuraCriar = new JButton("Criar Figurinha");
+						figuraCriar.setBounds(300, 400, 200, 30);
+						janela4.add(figuraCriar);
+						figuraCriar.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								if("".equals(janela4.campname.getText())) {
+									JOptionPane.showMessageDialog(null, "Prencha todos os campos");
+								} else {
+									JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
+								}
+								
+							}
+						});
+					}
+					if("Yu-Gi-Oh!".equals(janela3.albuns.getSelectedItem())) {
+						JanelaYugioh janela5 = new JanelaYugioh();
+						//botão de criar figurinha
+						JButton figuraCriar = new JButton("Criar Figurinha");
+						figuraCriar.setBounds(300, 400, 200, 30);
+						janela5.add(figuraCriar);
+						figuraCriar.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								if("".equals(janela5.campnameyu.getText())) {
+									JOptionPane.showMessageDialog(null, "Prencha todos os campos");
+								} else {
+									JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
+								}
+								
+							}
+						});
+						
+					}}
+				}
+						);
 			}
 		});
 				
