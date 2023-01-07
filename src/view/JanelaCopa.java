@@ -7,20 +7,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class JanelaYugioh extends JFrame{
+public class JanelaCopa extends JFrame{
 		JPanel ptxt = new JPanel();
-		JTextField campnameyu = new JTextField();
-		JTextField camprariyu = new JTextField();
-		JTextField camptipoyu = new JTextField();
-		JTextField campatkyu = new JTextField();
-		JTextField campdefyu = new JTextField();
-		JTextField camnivelyu = new JTextField();
-		JLabel nome = new JLabel("Digite o nome do Monstro:");
+		JTextField campnamefut = new JTextField();
+		JTextField camprarifut = new JTextField();
+		JTextField campalturafut = new JTextField();
+		JTextField campnascfut = new JTextField();
+		JTextField campselecaofut = new JTextField();
+		JTextField camppesofut = new JTextField();
+		JLabel nome = new JLabel("Digite o nome do Jogador:");
 		JLabel raridade = new JLabel("Digite a Raridade:");
-		JLabel tipo = new JLabel("Digite o Tipo:");
-		JLabel atk = new JLabel("Digite o Ataque:");
-		JLabel def = new JLabel("Digite a Defesa:");
-		JLabel nivel = new JLabel("Digite o Nivel:");
+		JLabel altura = new JLabel("Digite a Altura:");
+		JLabel nascimento = new JLabel("Digite a Data de Nascimento:");
+		JLabel selecao = new JLabel("Digite a Seleção:");
+		JLabel peso = new JLabel("Digite o Peso:");
 
 		
 		JPanel titulo = new JPanel();
@@ -30,7 +30,7 @@ public class JanelaYugioh extends JFrame{
 		JPanel titulo5 = new JPanel();
 		JPanel titulo6 = new JPanel();
 
-public JanelaYugioh () {
+public JanelaCopa () {
 
 
 	
@@ -68,43 +68,44 @@ public JanelaYugioh () {
 	titulo2.add(raridade);
 	
 	//Jlabel que sera colocado no Panel acima
-	tipo.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
-	titulo3.add(tipo);
+	altura.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+	titulo3.add(altura);
 	
 	//Jlabel que sera colocado no Panel acima
-	atk.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
-	titulo4.add(atk);
+	nascimento.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+	titulo4.add(nascimento);
 	
 	//Jlabel que sera colocado no Panel acima
-	def.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
-	titulo5.add(def);
+	selecao.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+	titulo5.add(selecao);
 	
 	//Jlabel que sera colocado no Panel acima
-	nivel.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
-	titulo6.add(nivel);
+	peso.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+	titulo6.add(peso);
 	
-	
+    
+
 
 	//JTextField para coletar o nome do pokemon 
-	campnameyu.setBounds(70, 40, 230, 30);
-	add(campnameyu);
+	campnamefut.setBounds(70, 40, 230, 30);
+	add(campnamefut);
 
-	camprariyu.setBounds(70, 100, 230, 30);
-	add(camprariyu);
+	camprarifut.setBounds(70, 100, 230, 30);
+	add(camprarifut);
 	
-	camptipoyu.setBounds(70, 160, 230, 30);
-	add(camptipoyu);
+	campalturafut.setBounds(70, 160, 230, 30);
+	add(campalturafut);
 	
-	campatkyu.setBounds(70, 230, 230, 30);
-	add(campatkyu);
+	campnascfut.setBounds(70, 230, 230, 30);
+	add(campnascfut);
 
-	campdefyu.setBounds(70, 290, 230, 30);
-	add(campdefyu);
+	campselecaofut.setBounds(70, 290, 230, 30);
+	add(campselecaofut);
 	
-	camnivelyu.setBounds(70, 350, 230, 30);
-	add(camnivelyu);
+	camppesofut.setBounds(70, 350, 230, 30);
+	add(camppesofut);
 	
-	setTitle("Album YU-GI-OH "  );
+	setTitle("Album Da Copa Do Mundo"  );
 	setLayout(null);
 	setSize(400, 500);
 	setLocationRelativeTo(null);
@@ -114,4 +115,3 @@ public JanelaYugioh () {
 }
 
 }
-

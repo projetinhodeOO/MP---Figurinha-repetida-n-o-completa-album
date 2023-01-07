@@ -13,8 +13,9 @@ public class JanelaInicial extends JFrame{
 	public JanelaInicial() {
 		//Adicionando o JPanel do topo
 		add(topo);
-		topo.setBounds(0, 0, 1280, 70);
+		topo.setBounds(0, 0, 1000, 70);
 		topo.setBackground(Color.BLACK);
+		
 		//Adicionando o texto que vai no JPanel
 		topo.add(label);
 		label.setFont(new Font("Comfortaa", Font.CENTER_BASELINE, 40));
@@ -26,13 +27,13 @@ public class JanelaInicial extends JFrame{
 		add(im1);
 				
 		//Espaco para imagem2
-		im2.setBounds(1010, 300, 200, 200);
+		im2.setBounds(700, 300, 200, 200);
 		im2.setBackground(Color.WHITE);
 		add(im2);
 		
 		setTitle("Controle de Album de Figurinhas");	
 		setLayout(null);
-		setSize(1280, 720);
+		setSize(1000, 720);
 		getContentPane().setBackground(Color.GRAY);
 		setLocationRelativeTo(null);
 		setVisible(true);

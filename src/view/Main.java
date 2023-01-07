@@ -25,7 +25,7 @@ public class Main {
 		
 		//Botao para gerenciar album
 		JButton botao2 = new JButton();
-		botao2.setBounds(1020, 250, 180, 30);
+		botao2.setBounds(710, 250, 180, 30);
 		janela1.add(botao2);
 		
 		//Texto do botao
@@ -57,9 +57,6 @@ public class Main {
 					}
 				
 				});
-				
-				
-				
 			}
 		});
 		//Acao tomada quando selecionado a opcao de gerenciar album
@@ -102,10 +99,7 @@ public class Main {
 						 }
 					}
 				});		
-					
-					
-					}});
-					
+}});	
 }});
                 //Botao para edicao
 				JButton btnEdit = new JButton("Editar");
@@ -127,26 +121,52 @@ public class Main {
 						JOptionPane.showMessageDialog(null, "Alterações salvas com sucesso");}
 					}
 				});
-						//botao para adicionar figruinha
-						JButton btnadd = new JButton("Adicionar figurinha");
-						janela4.add(btnadd);
-						btnadd.setBounds(110, 100, 150, 30);
 						//botao para excluir figruinha
 						JButton btnexc = new JButton("Excluir figurinha");
 						janela4.add(btnexc);
 						btnexc.setBounds(110, 160, 150, 30);
 						
+						btnexc.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								//janela de pergunta
+								JaneladeExclusão janela7 = new JaneladeExclusão();
+								// Botao do sim
+								JButton excluir = new JButton("Excluir");
+								excluir.setBounds(100, 500, 90, 30);
+								janela7.add(excluir);
+								
+						excluir.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								if(e.getSource() == excluir) {
+								JOptionPane.showMessageDialog(null, "Excluido com sucesso");}		
+		}});	
+		}});
+						
 						//botao para listar figruinha
 						JButton btnlist = new JButton("Listar figurinha");
 						janela4.add(btnlist);
 						btnlist.setBounds(110, 220, 150, 30);
+				btnlist.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						ListadeFigurinha janela8 = new ListadeFigurinha();	
+					}
+				});
 						
 						//botao para editar figruinha
 						JButton btneditar = new JButton("Editar figurinha");
 						janela4.add(btneditar);
 						btneditar.setBounds(110, 280, 150, 30);
-						//Açao do botao editar
-				btneditar.addActionListener(new ActionListener() {
+						
+						
+						
+						
+						//botao para adicionar figruinha
+						JButton btnadd = new JButton("Adicionar figurinha");
+						janela4.add(btnadd);
+						btnadd.setBounds(110, 100, 150, 30);
+						
+						//Açao do botao adicionar
+				btnadd.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						{if("Pokemon".equals(janela3.albuns.getSelectedItem())) {
 							Janelapokemon janela5 = new Janelapokemon();
@@ -160,8 +180,7 @@ public class Main {
 										JOptionPane.showMessageDialog(null, "Prencha todos os campos");
 									} else {
 										JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
-									}
-									
+									}	
 								}
 							});
 						}
@@ -178,21 +197,32 @@ public class Main {
 									} else {
 										JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
 									}
-									
 								}
 							});
 							
-						}}
+						}
+						if("Copa do Mundo Qatar".equals(janela3.albuns.getSelectedItem())) {
+							JanelaCopa janela8 = new JanelaCopa();
+							//botão de criar figurinha
+							JButton figuraCriar = new JButton("Criar Figurinha");
+							figuraCriar.setBounds(80, 400, 200, 30);
+							janela8.add(figuraCriar);
+							figuraCriar.addActionListener(new ActionListener() {
+								public void actionPerformed(ActionEvent e) {
+									if("".equals(janela8.campnamefut.getText())) {
+										JOptionPane.showMessageDialog(null, "Prencha todos os campos");
+									} else {
+										JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
+									}
+								}
+							});
+							
+						}
+						
+						
+						}
 					}
 				});
-						
-
-
-
-						
-						
-						
-						
 						
 					}
 

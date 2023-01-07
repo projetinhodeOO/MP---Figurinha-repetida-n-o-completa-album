@@ -10,13 +10,13 @@ public class Janelapokemon extends JFrame{
 		JLabel nome = new JLabel("Digite o nome do pokemon:");
 		JLabel raridade = new JLabel("Digite a raridade:");
 		JLabel tipo = new JLabel("Digite o tipo:");
-
 		
 		JPanel titulo = new JPanel();
 		JPanel titulo2 = new JPanel();
 		JPanel titulo3 = new JPanel();
 
 public Janelapokemon () {
+
 	
 	//Novo JPanel para adicionar texto
 	titulo.setBounds(70, 50, 230, 30);
