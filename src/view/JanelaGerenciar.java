@@ -11,14 +11,14 @@ public class JanelaGerenciar extends JFrame{
 	public JanelaGerenciar() {
 		//JPanel para colocar texto
 		add(ptxt);
-		ptxt.setBounds(15, 30, 100, 30);
+		ptxt.setBounds(130, 30, 100, 30);
 
         //JLabel que sera colocada no Panel acima
         ptxt.add(label);
         label.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
         
 		//Lista dos tipos de album
-		albuns.setBounds(20, 60, 160, 30);
+		albuns.setBounds(100, 60, 160, 30);
 		albuns.addItem("Copa do Mundo Qatar");
 		albuns.addItem("Yu-Gi-Oh!");
 		albuns.addItem("Pokemon");
@@ -28,7 +28,7 @@ public class JanelaGerenciar extends JFrame{
         
         setTitle("Gerenciar album");
 		setLayout(null);
-		setSize(800, 500);
+		setSize(400, 500);
 		setLocationRelativeTo(null);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

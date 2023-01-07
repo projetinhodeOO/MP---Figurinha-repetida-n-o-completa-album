@@ -34,26 +34,26 @@ public class JanelaYugioh extends JFrame{
 public JanelaYugioh () {
 	
 	//Novo JPanel para adicionar texto
-	titulo.setBounds(280, 10, 230, 30);
+	titulo.setBounds(70, 10, 230, 30);
 	add(titulo);
 	
 	//Novo JPanel para adicionar texto
-	titulo2.setBounds(280, 70, 230, 30);
+	titulo2.setBounds(70, 70, 230, 30);
 	add(titulo2);
 	
 	//Novo JPanel para adicionar texto
-	titulo3.setBounds(280, 130, 230, 30);
+	titulo3.setBounds(70, 130, 230, 30);
 	add(titulo3);
 	
-	titulo4.setBounds(280, 200, 230, 30);
+	titulo4.setBounds(70, 200, 230, 30);
 	add(titulo4);
 	
 	//Novo JPanel para adicionar texto
-	titulo5.setBounds(280, 260, 230, 30);
+	titulo5.setBounds(70, 260, 230, 30);
 	add(titulo5);
 	
 	//Novo JPanel para adicionar texto
-	titulo6.setBounds(280, 320, 230, 30);
+	titulo6.setBounds(70, 320, 230, 30);
 	add(titulo6);
 	
 	
@@ -85,27 +85,27 @@ public JanelaYugioh () {
 	
 
 	//JTextField para coletar o nome do pokemon 
-	campnameyu.setBounds(280, 40, 230, 30);
+	campnameyu.setBounds(70, 40, 230, 30);
 	add(campnameyu);
 
-	camprariyu.setBounds(280, 100, 230, 30);
+	camprariyu.setBounds(70, 100, 230, 30);
 	add(camprariyu);
 	
-	camptipoyu.setBounds(280, 160, 230, 30);
+	camptipoyu.setBounds(70, 160, 230, 30);
 	add(camptipoyu);
 	
-	campatkyu.setBounds(280, 230, 230, 30);
+	campatkyu.setBounds(70, 230, 230, 30);
 	add(campatkyu);
 
-	campdefyu.setBounds(280, 290, 230, 30);
+	campdefyu.setBounds(70, 290, 230, 30);
 	add(campdefyu);
 	
-	camnivelyu.setBounds(280, 350, 230, 30);
+	camnivelyu.setBounds(70, 350, 230, 30);
 	add(camnivelyu);
 	
 	setTitle("Album YU-GI-OH "  );
 	setLayout(null);
-	setSize(800, 500);
+	setSize(400, 500);
 	setLocationRelativeTo(null);
 	setVisible(true);
 	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

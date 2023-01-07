@@ -70,7 +70,7 @@ public class Main {
 				//Botao para excluir album novo
                 JButton delete= new JButton();
                 janela3.add(delete);
-                delete.setBounds(600, 400, 150, 30);
+                delete.setBounds(220, 400, 130, 30);
 
                 //Texto do botao
                 JLabel text = new JLabel("Excluir album ");
@@ -107,59 +107,96 @@ public class Main {
 					}});
 					
 }});
-				
-				
-                
-                
-                
-                
-                
-                
                 //Botao para edicao
 				JButton btnEdit = new JButton("Editar");
 				janela3.add(btnEdit);
-				btnEdit.setBounds(300, 400, 100, 30);
+				btnEdit.setBounds(60, 400, 100, 30);
 				
 				//Acao do botão editar
 				btnEdit.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) 
-					{if("Pokemon".equals(janela3.albuns.getSelectedItem())) {
-						Janelapokemon janela4 = new Janelapokemon();
-						//botão de criar figurinha
-						JButton figuraCriar = new JButton("Criar Figurinha");
-						figuraCriar.setBounds(300, 400, 200, 30);
-						janela4.add(figuraCriar);
-						figuraCriar.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-								if("".equals(janela4.campname.getText())) {
-									JOptionPane.showMessageDialog(null, "Prencha todos os campos");
-								} else {
-									JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
-								}
-								
-							}
-						});
+					public void actionPerformed(ActionEvent e) {
+						// Janela de editar
+						JanelaEditar janela4 = new JanelaEditar();
+						//botao para salvar as alterações
+						JButton btnsave = new JButton("Salvar");
+						janela4.add(btnsave);
+						btnsave.setBounds(130, 400, 100, 30);
+				btnsave.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if(e.getSource() == btnsave) {
+						JOptionPane.showMessageDialog(null, "Alterações salvas com sucesso");}
 					}
-					if("Yu-Gi-Oh!".equals(janela3.albuns.getSelectedItem())) {
-						JanelaYugioh janela5 = new JanelaYugioh();
-						//botão de criar figurinha
-						JButton figuraCriar = new JButton("Criar Figurinha");
-						figuraCriar.setBounds(300, 400, 200, 30);
-						janela5.add(figuraCriar);
-						figuraCriar.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-								if("".equals(janela5.campnameyu.getText())) {
-									JOptionPane.showMessageDialog(null, "Prencha todos os campos");
-								} else {
-									JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
-								}
-								
-							}
-						});
+				});
+						//botao para adicionar figruinha
+						JButton btnadd = new JButton("Adicionar figurinha");
+						janela4.add(btnadd);
+						btnadd.setBounds(110, 100, 150, 30);
+						//botao para excluir figruinha
+						JButton btnexc = new JButton("Excluir figurinha");
+						janela4.add(btnexc);
+						btnexc.setBounds(110, 160, 150, 30);
 						
-					}}
-				}
-						);
+						//botao para listar figruinha
+						JButton btnlist = new JButton("Listar figurinha");
+						janela4.add(btnlist);
+						btnlist.setBounds(110, 220, 150, 30);
+						
+						//botao para editar figruinha
+						JButton btneditar = new JButton("Editar figurinha");
+						janela4.add(btneditar);
+						btneditar.setBounds(110, 280, 150, 30);
+						//Açao do botao editar
+				btneditar.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						{if("Pokemon".equals(janela3.albuns.getSelectedItem())) {
+							Janelapokemon janela5 = new Janelapokemon();
+							//botão de criar figurinha
+							JButton figuraCriar = new JButton("Criar Figurinha");
+							figuraCriar.setBounds(80, 400, 200, 30);
+							janela5.add(figuraCriar);
+							figuraCriar.addActionListener(new ActionListener() {
+								public void actionPerformed(ActionEvent e) {
+									if("".equals(janela5.campname.getText())) {
+										JOptionPane.showMessageDialog(null, "Prencha todos os campos");
+									} else {
+										JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
+									}
+									
+								}
+							});
+						}
+						if("Yu-Gi-Oh!".equals(janela3.albuns.getSelectedItem())) {
+							JanelaYugioh janela6 = new JanelaYugioh();
+							//botão de criar figurinha
+							JButton figuraCriar = new JButton("Criar Figurinha");
+							figuraCriar.setBounds(80, 400, 200, 30);
+							janela6.add(figuraCriar);
+							figuraCriar.addActionListener(new ActionListener() {
+								public void actionPerformed(ActionEvent e) {
+									if("".equals(janela6.campnameyu.getText())) {
+										JOptionPane.showMessageDialog(null, "Prencha todos os campos");
+									} else {
+										JOptionPane.showMessageDialog(null, "Figurinha criado com sucesso");
+									}
+									
+								}
+							});
+							
+						}}
+					}
+				});
+						
+
+
+
+						
+						
+						
+						
+						
+					}
+
+				});
 			}
 		});
 				
