@@ -44,7 +44,7 @@ public class Main {
 				//Botao para finalizar a criacao
 				JButton btnCriar = new JButton("Criar");
 				janela2.add(btnCriar);
-				btnCriar.setBounds(350, 400, 100, 30);
+				btnCriar.setBounds(140, 400, 100, 30);
 				
 				btnCriar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {

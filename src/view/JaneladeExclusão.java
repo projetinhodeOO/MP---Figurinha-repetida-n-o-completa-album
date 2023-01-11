@@ -3,7 +3,7 @@ package view;
 import java.awt.*;
 import javax.swing.*;
 public class JaneladeExclusão extends JFrame{
-		JPanel ptxt = new JPanel();
+		
 		JTextField campname = new JTextField();
 		JComboBox<String> albuns = new JComboBox<String>();
 

@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class JanelaCopa extends JFrame{
-		JPanel ptxt = new JPanel();
 		JTextField campnamefut = new JTextField();
 		JTextField camprarifut = new JTextField();
 		JTextField campalturafut = new JTextField();
@@ -86,7 +85,7 @@ public JanelaCopa () {
     
 
 
-	//JTextField para coletar o nome do pokemon 
+	//JTextField para coletar o nome do jogador 
 	campnamefut.setBounds(70, 40, 230, 30);
 	add(campnamefut);
 

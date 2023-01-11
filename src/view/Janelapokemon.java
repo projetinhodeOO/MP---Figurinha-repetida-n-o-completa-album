@@ -3,7 +3,7 @@ package view;
 import java.awt.*;
 import javax.swing.*;
 public class Janelapokemon extends JFrame{
-		JPanel ptxt = new JPanel();
+		
 		JTextField campname = new JTextField();
 		JTextField camprari = new JTextField();
 		JTextField camptipo = new JTextField();

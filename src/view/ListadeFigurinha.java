@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class ListadeFigurinha extends JFrame{
-	JPanel ptxt = new JPanel(); 
+ 
 	JLabel nome = new JLabel("Suas figurinhas");
 	JComboBox<String> lista = new JComboBox<String>();
 

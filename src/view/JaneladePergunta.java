@@ -3,7 +3,7 @@ package view;
 import java.awt.*;
 import javax.swing.*;
 public class JaneladePergunta extends JFrame{
-		JPanel ptxt = new JPanel();
+		
 		JTextField campname = new JTextField();
 
 		JLabel nome = new JLabel("Deseja excluir ?");

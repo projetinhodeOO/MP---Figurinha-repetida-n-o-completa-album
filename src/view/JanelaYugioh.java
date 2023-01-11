@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class JanelaYugioh extends JFrame{
-		JPanel ptxt = new JPanel();
+		
 		JTextField campnameyu = new JTextField();
 		JTextField camprariyu = new JTextField();
 		JTextField camptipoyu = new JTextField();

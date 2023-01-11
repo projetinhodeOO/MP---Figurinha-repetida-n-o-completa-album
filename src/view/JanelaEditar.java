@@ -3,7 +3,6 @@ package view;
 import java.awt.*;
 import javax.swing.*;
 public class JanelaEditar extends JFrame{
-		JPanel ptxt = new JPanel();
 		JPanel titulo = new JPanel();
 		JLabel nome = new JLabel("Mudar o nome do album:");
 		JTextField newname = new JTextField();
