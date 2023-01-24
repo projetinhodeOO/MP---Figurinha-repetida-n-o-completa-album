@@ -1,7 +1,16 @@
 package model;
 
+/**
+ * Classe Album nada mais eh do que um album de figurinhas. Ela armazena um nome, 
+ * um tipo (podendo ser 3: copa, pokemon, yugioh), um ano de publicacao no modelo
+ * XX/XX/XXXX, quantidade de figurinhas armazenadas, quantidade total de figurinhas
+ * e as figurinhas em si.
+ * @author Vinicius Eduardo Muniz da Silva
+ * @since 2023
+ */
 public class Album {
 	private String nome;
+	private String tipo;
 	private int ano;
 	private int qtd_figurinha;
 	private int qtd_figurinha_total;
@@ -9,7 +18,7 @@ public class Album {
 	
 	public Album() {
 		qtd_figurinha = 0;
-		figurinha = new Figurinha[600];
+		figurinha = new Figurinha[900];
 	}
 
 	public String getNome() {
@@ -18,6 +27,14 @@ public class Album {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getTipo() {
+		return tipo;
+	}
+	
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 	public int getAno() {
@@ -36,8 +53,15 @@ public class Album {
 		this.qtd_figurinha = qtd_figurinha;
 	}
 	
-	public String getFigurinha(int i) {
-		return figurinha[i].toString();
+	public Figurinha getFigurinha(int i) {
+		return figurinha[i];
+	}
+	
+	public void setFigurinha(Figurinha figurinha) {
+		if(qtd_figurinha < qtd_figurinha_total) {
+			this.figurinha[qtd_figurinha] = figurinha;
+			this.qtd_figurinha++;
+		} 
 	}
 	
 	public int getQtd_figurinha_total() {
@@ -46,47 +70,6 @@ public class Album {
 
 	public void setQtd_figurinha_total(int qtd_figurinha_total) {
 		this.qtd_figurinha_total = qtd_figurinha_total;
-	}
-	
-	public boolean addFigurinha(Figurinha f) {
-		if(qtd_figurinha < qtd_figurinha_total) {	
-			figurinha[qtd_figurinha] = f;
-			qtd_figurinha++;
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
-	public void removerFigurinha(String nome) {
-		int confere = 0;
-		
-		for(int i = 0; i < qtd_figurinha; i++) {
-			if(figurinha[i].getNome() == nome) {
-				confere = 1;
-			}
-			if(confere == 1 && i != qtd_figurinha-1) {
-				figurinha[i] = figurinha[i+1];
-			}
-		}
-		if(confere == 0) {
-			
-		} else {
-			qtd_figurinha--;
-		}
-	}
-	
-	public String listarFigurinhas() {
-		if(qtd_figurinha == 0) {
-			return "Não há figurinhas cadastradas nesse album";
-		} else {
-			String lista = figurinha[0].getNome();
-			for(int i = 1; i < qtd_figurinha; i++) {
-				lista = lista + "\n" + figurinha[i].getNome();
-			}
-		
-			return "Figurinhas:\n" + lista;
-		}
 	}
 	
 	public String toString() {

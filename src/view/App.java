@@ -5,7 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class Main {
+/**
+ * A classe App eh a classe main da aplicacao. Ela que eh a responsavel por inicializar a 
+ * aplicacao e estancia sua janela inicial com dois botoes, que levam para outras janelas
+ * de criar e gerenciar album.
+ * @author Vinicius Eduardo Muniz da Silva
+ * @since 2023
+ */
+public class App {
 	public static void main (String args[]) {
 		//Criando a janela
 		JanelaInicial janela1 = new JanelaInicial();
@@ -23,7 +30,7 @@ public class Main {
 		//Botao para gerenciar album
 		JButton botao2 = new JButton();
 		
-		botao2.setBounds(1020, 250, 180, 30);
+		botao2.setBounds(710, 250, 180, 30);
 		janela1.add(botao2);
 		
 		//Texto do botao
@@ -36,21 +43,6 @@ public class Main {
 			public void actionPerformed(ActionEvent e) {
 				//Criando a nova janela para criar albuns
 				JanelaCriar janela2 = new JanelaCriar();
-				
-				//Botao para finalizar a criacao
-				JButton btnCriar = new JButton("Criar");
-				btnCriar.setBounds(350, 400, 100, 30);
-				janela2.add(btnCriar);
-				
-				btnCriar.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						if("".equals(janela2.campotxt.getText()) ) {
-							JOptionPane.showMessageDialog(null, "Digite um nome para o album");
-						} else {
-							JOptionPane.showMessageDialog(null, "Album criado com sucesso");
-						}
-					}
-				});
 			}
 		});
 		//Acao tomada quando selecionado a opcao de gerenciar album

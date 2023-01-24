@@ -1,5 +1,14 @@
 package model;
 
+/**
+ * Classe abstrata do tipo Figurinha. Possui tres classes filhas: CopaDoMundoQatar,
+ * Pokemon e Yugioh.
+ * @see CopaDoMundoQatar
+ * @see Pokemon
+ * @See Yugioh
+ * @author Vinicius Eduardo Muniz da Silva
+ * @since 2023
+ */
 public abstract class Figurinha {
 	protected String nome;
 	protected String raridade;
@@ -12,8 +21,6 @@ public abstract class Figurinha {
 	public Figurinha() {
 
 	}
-	
-	public abstract String toString();
 	
 	public String getNome() {
 		return nome;

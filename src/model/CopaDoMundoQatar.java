@@ -1,5 +1,13 @@
 package model;
 
+/**
+ * A classe CopaDoMundoQatar eh uma classe de figurinhas do tipo "copa". Ela herda da classe abstrata Figurinha
+ * todos os seus metodos e atributos, ao mesmo tempo que possui os atributos proprios de um jogador de futebol.
+ * Os objetos dessa classe entao deverao ficar armazenados em um album do tipo "copa".
+ * @see Album
+ * @author Vinicius Eduardo Muniz da Silva
+ * @since 2023
+ */
 public class CopaDoMundoQatar extends Figurinha {
 	private double altura;
 	private String nascimento;

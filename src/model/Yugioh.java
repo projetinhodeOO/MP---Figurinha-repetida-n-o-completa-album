@@ -1,5 +1,12 @@
 package model;
 
+/**
+ * A classe Yugioh eh uma classe de figurinhas do tipo "yugioh". Ela herda da classe abstrata Figurinha
+ * todos os seus metodos e atributos, ao mesmo tempo que possui os atributos proprios de um monstro de
+ * Yugioh. Os objetos dessa classe entao deverao ficar armazenados em um album do tipo "yugioh".
+ * @author Vinicius Eduardo Muniz da Silva
+ * @since 2023
+ */
 public class Yugioh extends Figurinha{
 	private String tipo;
 	private int atk;
