@@ -10,7 +10,7 @@ package model;
  */
 public class CopaDoMundoQatar extends Figurinha {
 	private double altura;
-	private String nascimento;
+	private String nascimento; //"XX/XX/XXXX"
 	private String selecao;
 	private double peso;
 

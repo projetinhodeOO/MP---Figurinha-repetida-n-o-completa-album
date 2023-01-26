@@ -2,9 +2,8 @@ package model;
 
 /**
  * Classe Album nada mais eh do que um album de figurinhas. Ela armazena um nome, 
- * um tipo (podendo ser 3: copa, pokemon, yugioh), um ano de publicacao no modelo
- * XX/XX/XXXX, quantidade de figurinhas armazenadas, quantidade total de figurinhas
- * e as figurinhas em si.
+ * um tipo (podendo ser 3: copa, pokemon, yugioh), um ano de publicacao, quantidade
+ * de figurinhas armazenadas, quantidade total de figurinhas e as figurinhas em si.
  * @author Vinicius Eduardo Muniz da Silva
  * @since 2023
  */
